@@ -7,14 +7,19 @@
 </template>
 
 <script>
-import TodoItem from './TodoItem.vue';
+import TodoItem from '@/components/TodoItem.vue';
 
 export default {
   names: 'Todos',
   components: {
     TodoItem
   },
-  props: ['todos']
+  props: {
+    todos: {
+      type: Array,
+      required: true
+    }
+  }
 };
 </script>
 
